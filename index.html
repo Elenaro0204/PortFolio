@@ -7,7 +7,7 @@
     <title>PortFolio Tailwind</title>
     <link rel="stylesheet" href="./dist/css/styles-compilado.css">
     <!-- Icono de la pestaña -->
-    <link rel="icon" type="image/png" href="./dist/assets/mis_logos/Logo.png" />
+    <link rel="icon" type="image/png" href="./dist/assets/mis_logos/2.png" />
     <!-- IMPORTANDO UNA FUENTE DE GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,17 +21,67 @@
     <header class="bg-gray-800 w-full top-0 shadow-md py-4">
         <div class="wrapper flex justify-between items-center px-8">
             <!-- LOGO -->
-            <a href="#" class="text-3xl font-bold hover:text-yellow-400 transition-colors">
-                <h1>Mi Logo</h1>
-            </a>
+            <figure class="w-auto">
+                <a href="#">
+                    <img src="dist/assets/mis_logos/4.png" alt="Logo Portfolio" class="w-24 h-24">
+                </a>
+            </figure>
 
-            <!-- NAV -->
-            <nav class="space-x-8 text-xl">
-                <a href="#presentacion" class="hover:text-yellow-400 transition-colors">Conóceme</a>
-                <a href="#habilidades" class="hover:text-yellow-400 transition-colors">Habilidades</a>
-                <a href="#proyectos" class="hover:text-yellow-400 transition-colors">Proyectos</a>
-                <a href="#contacto" class="hover:text-yellow-400 transition-colors">Contacto</a>
+            <!-- Botón de menú para móviles -->
+            <button id="menu-toggle" class="md:hidden text-white text-3xl focus:outline-none">
+                ☰
+            </button>
+
+            <!-- Navegación visible en pantallas grandes -->
+            <nav class="hidden md:flex gap-6 space-x-8 text-xl">
+                <a href="#presentacion"
+                    class="text-lg font-medium hover:text-yellow-400 transition duration-500 transform hover:rotate-360">Conóceme</a>
+                <a href="#habilidades"
+                    class="text-lg font-medium hover:text-yellow-400 transition duration-500 transform hover:rotate-360">Habilidades</a>
+                <a href="#proyectos"
+                    class="text-lg font-medium hover:text-yellow-400 transition duration-500 transform hover:rotate-360">Proyectos</a>
+                <a href="#contacto"
+                    class="text-lg font-medium hover:text-yellow-400 transition duration-500 transform hover:rotate-360">Contacto</a>
             </nav>
+
+            <!-- Menú móvil -->
+            <div id="mobileMenu"
+                class="fixed top-0 right-0 w-auto min-w-max h-full bg-gray-800 shadow-lg transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-start p-6 space-y-6">
+                <button id="close-menu" class="p-2 rounded-full text-3xl self-end">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <a href="#presentacion"
+                    class="text-lg font-medium text-white hover:text-yellow-300 transition duration-500 transform hover:rotate-360">
+                    Conóceme
+                </a>
+
+                <a href="#habilidades"
+                    class="text-lg font-medium text-white hover:text-yellow-300 transition duration-500 transform hover:rotate-360">
+                    Habilidades
+                </a>
+
+                <a href="#proyectos"
+                    class="text-lg font-medium text-white hover:text-yellow-300 transition duration-500 transform hover:rotate-360">
+                    Proyectos
+                </a>
+
+                <a href="#contacto"
+                    class="text-lg font-medium text-white hover:text-yellow-300 transition duration-500 transform hover:rotate-360">
+                    Contacto
+                </a>
+
+                <!-- Logo -->
+                <figure class="absolute bottom-0 left-0 w-full p-4">
+                    <a href="#">
+                        <img src="dist/assets/mis_logos/4.png" alt="Hackathon 2025" class="w-16 h-16 mx-auto">
+                    </a>
+                </figure>
+
+            </div>
         </div>
     </header>
 
@@ -437,7 +487,7 @@
     <section id="proyectos" class="py-16 bg-gray-800">
         <div class="wrapper text-center">
             <h2>Proyectos</h2>
-            <div class="grid grid-cols-3 gap-12">
+            <div class="grid grid-cols-2 gap-12">
                 <div class="bg-gray-700 p-8 rounded-lg">
                     <img src="./dist/assets/proyectos/Captura_Hackathon.png" alt="Proyecto 1"
                         class="w-full h-48 object-cover rounded-lg mb-4">
@@ -450,12 +500,6 @@
                     <a href="https://proyectofinaldiw-team.netlify.app/" target="_blank"
                         class="text-xl text-yellow-400 hover:underline">Ver Página</a>
                 </div>
-                <div class="bg-gray-700 p-8 rounded-lg">
-                    <img src="./dist/assets/proyectos/proyecto3.jpg" alt="Proyecto 3"
-                        class="w-full h-48 object-cover rounded-lg mb-4">
-                    <a href="https://hackatonutrera.netlify.app/" target="_blank"
-                        class="text-xl text-yellow-400 hover:underline">Ver Página</a>
-                </div>
             </div>
         </div>
     </section>
@@ -464,7 +508,7 @@
     <section id="ultimos-proyectos" class="py-16 bg-gray-800">
         <div class="wrapper text-center">
             <h2>Últimos Proyectos</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div class="bg-gray-700 p-8 rounded-lg text-white">
                     <h3 class="text-2xl font-bold mb-4">Página Web del Hackathon Intercentros</h3>
                     <p class="text-lg mb-4">Diseño de una página web para un concurso intercentros locales donde se
@@ -472,16 +516,10 @@
                     <a href="https://hackatonutrera.netlify.app/" class="text-yellow-400">Ver Proyecto</a>
                 </div>
                 <div class="bg-gray-700 p-8 rounded-lg text-white">
-                    <h3 class="text-2xl font-bold mb-4">Página Web para Restaurante</h3>
-                    <p class="text-lg mb-4">Diseño de una página web para un restaurante local, con un sistema de
-                        reservas y menú digital.</p>
-                    <a href="https://github.com/tu-perfil/restaurante-web" class="text-yellow-400">Ver Proyecto</a>
-                </div>
-                <div class="bg-gray-700 p-8 rounded-lg text-white">
-                    <h3 class="text-2xl font-bold mb-4">Blog Personal</h3>
-                    <p class="text-lg mb-4">Blog personal para compartir mis conocimientos sobre desarrollo web y
+                    <h3 class="text-2xl font-bold mb-4">PortFolio Personal</h3>
+                    <p class="text-lg mb-4">PortFolio personal para compartir mis proyectos sobre desarrollo web y
                         programación.</p>
-                    <a href="https://github.com/tu-perfil/personal-blog" class="text-yellow-400">Ver Proyecto</a>
+                    <a href="https://elenawebs.netlify.app/" class="text-yellow-400">Ver Proyecto</a>
                 </div>
             </div>
         </div>
@@ -559,8 +597,42 @@
 
     <!-- FOOTER -->
     <footer class="bg-gray-800 text-center py-8">
-        <p class="text-sm text-white">&copy; 2025 Mi PortFolio. Todos los derechos reservados.</p>
+        <p class="text-sm text-white">&copy; 2025 PortFolio Elena Rengel. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- INICIO Script Menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const closeMenu = document.getElementById("close-menu");
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            // Abrir el menú
+            menuToggle.addEventListener("click", (event) => {
+                mobileMenu.classList.remove("translate-x-full");
+                event.stopPropagation(); // Evita que el clic en el botón también dispare el cierre del menú
+            });
+
+            // Cerrar el menú con el botón "X"
+            closeMenu.addEventListener("click", () => {
+                mobileMenu.classList.add("translate-x-full");
+            });
+
+            // Cerrar el menú al hacer clic fuera de él
+            document.addEventListener("click", (event) => {
+                if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    mobileMenu.classList.add("translate-x-full");
+                }
+            });
+
+            // Evitar que los clics dentro del menú lo cierren
+            mobileMenu.addEventListener("click", (event) => {
+                event.stopPropagation();
+            });
+        });
+
+    </script>
+    <!-- FIN Script Menu -->
 
 </body>
 
