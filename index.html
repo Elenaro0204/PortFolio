@@ -19,7 +19,7 @@
 <body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">
 
     <!-- HEADER -->
-    <header class="bg-gray-800 w-full top-0 shadow-md py-4">
+    <header class="bg-gray-800 w-full top-0 shadow-md py-4 fixed z-50">
         <div class="wrapper flex justify-between items-center px-8">
             <!-- LOGO -->
             <figure class="w-auto">
@@ -47,7 +47,7 @@
 
             <!-- Menú móvil -->
             <div id="mobileMenu"
-                class="fixed top-0 right-0 w-auto min-w-max h-full bg-gray-800 shadow-lg transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-start p-6 space-y-6">
+                class="fixed top-0 right-0 w-auto min-w-max h-full bg-gray-800 shadow-lg transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-start p-6 space-y-6 z-50">
                 <button id="close-menu" class="p-2 rounded-full text-3xl self-end">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -86,38 +86,53 @@
         </div>
     </header>
 
+    <!-- Botón de volver arriba -->
+    <button id="scrollTopBtn" onclick="scrollToTop()"
+        class="fixed bottom-6 right-6 bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-3 px-4 rounded-xl shadow-lg opacity-0 transition-opacity duration-300 z-50">
+        ↑
+    </button>
+
     <!-- HERO -->
     <section
         class="flex flex-col justify-center items-center text-center py-24 md:py-32 min-h-screen bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500">
         <h1 class="text-6xl md:text-7xl font-bold mb-6 hidden-item">¡Bienvenidos a mi PortFolio!</h1>
-        <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto hidden-item">
+        <p class="text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-lg md:max-w-2xl mx-auto hidden-item">
             En esta página encontrarás información sobre las tecnologías que domino, como Java, JavaScript, PHP y
             frameworks modernos como Laravel y Spring Boot. Además, podrás ver una pequeña muestra de algunos de mis
             trabajos, los cuales abarcan desde desarrollo web hasta aplicaciones móviles. Mi objetivo es crear
             soluciones eficientes, adaptadas a las necesidades de cada cliente. Si buscas un proyecto único y
             personalizado, ¡estoy aquí para ayudarte a hacerlo realidad!
         </p>
-        <a href="#contacto"
-            class="bg-yellow-400 px-8 py-4 rounded-full text-lg font-bold hover:bg-yellow-500 transition-colors hidden-item">¡Contáctame!</a>
+        <a href="#contacto" class="bg-yellow-400 px-8 py-4 rounded-full text-lg font-bold hover:bg-yellow-500 transition-colors hidden-item 
+           animate-bounce hover:animate-none">
+            ¡Contáctame!
+        </a>
     </section>
 
     <!-- PRESENTACIÓN -->
     <section id="presentacion" class="py-16 bg-gray-800">
         <div class="wrapper flex justify-center items-center flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-12">
             <img src="./dist/assets/img/undraw_professional-woman-avatar_ivds.svg"
-                class="w-64 h-64 rounded-full mb-6 md:mb-0 hidden-item" alt="Foto Propia">
-            <div class="text-center md:text-left text-white space-y-4 hidden-item">
-                <h2 class="hidden-item">Conóceme</h2>
-                <p class="hidden-item">¡Hola! Soy Elena, una apasionada del desarrollo web y la programación. Me encanta
-                    explorar nuevas
-                    tecnologías y crear proyectos que resuelvan problemas reales. </p>
-                <p class="hidden-item">Mi especialidad es el desarrollo
-                    front-end y back-end, trabajando con lenguajes como JavaScript, PHP, y Java, y tecnologías como
-                    HTML5, CSS3, Laravel y Spring Boot. </p>
-                <p class="hidden-item">Siempre estoy buscando mejorar mis habilidades y aprender cosas
-                    nuevas, y disfruto colaborar en proyectos que desafíen mis capacidades. Me motiva el trabajo en
-                    equipo, y siempre estoy abierta a nuevas ideas y enfoques creativos. ¡Encantada de conocerte!</p>
-                <h3 class="text-xl font-bold text-yellow-400 hidden-item">¡Encantada de conocerte!</h3>
+                class="w-64 h-64 rounded-full mb-6 md:mb-0 hidden-item animate__animated animate__fadeInLeft"
+                alt="Foto Propia">
+            <div
+                class="text-center md:text-left text-white space-y-4 hidden-item animate__animated animate__fadeInRight">
+                <h2 class="text-3xl font-semibold animate__animated animate__fadeInUp delay-1s">Conóceme</h2>
+                <p class="animate__animated animate__fadeInUp delay-1s">
+                    ¡Hola! Soy Elena, una apasionada del desarrollo web y la programación. Me encanta explorar nuevas
+                    tecnologías y crear proyectos que resuelvan problemas reales.
+                </p>
+                <p class="animate__animated animate__fadeInUp delay-2s">
+                    Mi especialidad es el desarrollo front-end y back-end, trabajando con lenguajes como JavaScript,
+                    PHP, y Java, y tecnologías como HTML5, CSS3, Laravel y Spring Boot.
+                </p>
+                <p class="animate__animated animate__fadeInUp delay-3s">
+                    Siempre estoy buscando mejorar mis habilidades y aprender cosas nuevas, y disfruto colaborar en
+                    proyectos que desafíen mis capacidades. Me motiva el trabajo en equipo, y siempre estoy abierta a
+                    nuevas ideas y enfoques creativos. ¡Encantada de conocerte!
+                </p>
+                <h3 class="text-xl font-bold text-yellow-400 animate__animated animate__fadeInUp delay-4s">¡Encantada de
+                    conocerte!</h3>
             </div>
         </div>
     </section>
@@ -126,7 +141,7 @@
     <section id="educacion" class="py-16 bg-gray-900">
         <div class="wrapper text-center">
             <h2 class="hidden-item">Educación y Certificaciones</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 hidden-item">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 hidden-item">
                 <div class="bg-gray-700 p-8 rounded-lg text-white shadow-lg hidden-item">
                     <h3 class="text-2xl font-bold">Grado Superior Desarrollo de Aplicaciones Web</h3>
                     <p class="text-lg">IES Ruiz Gijón - 2025</p>
@@ -153,9 +168,9 @@
             <h2 class="hidden-item">Habilidades</h2>
 
             <!-- Lenguajes de programación -->
-            <div class="mb-12">
+            <div class="mb-8">
                 <h3 class="text-3xl font-bold text-white mb-6 hidden-item">Lenguajes de Programación</h3>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Java -->
                     <article
                         class="bg-gradient-to-b from-red-600 to-red-500 p-8 rounded-lg text-center hover:scale-105 transform transition-all hidden-item">
@@ -198,9 +213,9 @@
             </div>
 
             <!-- Tecnologías web -->
-            <div class="mb-12">
+            <div class="mb-8">
                 <h3 class="text-3xl font-bold text-white mb-6 hidden-item">Tecnologías Web</h3>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                     <!-- HTML5 -->
                     <article
                         class="bg-gradient-to-b from-indigo-600 to-indigo-500 p-8 rounded-lg text-center hover:scale-105 transform transition-all hidden-item">
@@ -324,9 +339,9 @@
             </div>
 
             <!-- Bases de Datos -->
-            <div class="mb-12">
+            <div class="mb-8">
                 <h3 class="text-3xl font-bold text-white mb-6 hidden-item">Bases de Datos</h3>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+                <div class="grid grid-cols-2 gap-6">
                     <!-- MySQL -->
                     <article
                         class="bg-gradient-to-b from-blue-500 to-blue-400 p-8 rounded-lg text-center hover:scale-105 transform transition-all hidden-item">
@@ -348,9 +363,10 @@
             </div>
 
             <!-- Entornos de desarrollo y control de versiones -->
-            <div class="mb-12">
-                <h3 class="text-3xl font-bold text-white mb-6 hidden-item">Entornos de Desarrollo y Control de Versiones</h3>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+            <div class="mb-8">
+                <h3 class="text-3xl font-bold text-white mb-6 hidden-item">Entornos de Desarrollo y Control de Versiones
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                     <!-- Eclipse -->
                     <article
                         class="bg-gradient-to-b from-indigo-600 to-indigo-500 p-8 rounded-lg text-center hover:scale-105 transform transition-all hidden-item">
@@ -401,9 +417,9 @@
             </div>
 
             <!-- Gestores de Contenido -->
-            <div class="mb-12">
+            <div class="mb-8">
                 <h3 class="text-3xl font-bold text-white mb-6 hidden-item">Gestores de Contenido</h3>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Wordpress -->
                     <article
                         class="bg-gradient-to-b from-blue-600 to-blue-500 p-8 rounded-lg text-center hover:scale-105 transform transition-all hidden-item">
@@ -432,9 +448,9 @@
             </div>
 
             <!-- Otras Tecnologías -->
-            <div class="mb-12">
+            <div class="mb-8">
                 <h3 class="text-3xl font-bold text-white mb-6 hidden-item">Otras Tecnologías</h3>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+                <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Apache -->
                     <article
                         class="bg-gradient-to-b from-gray-600 to-gray-500 p-8 rounded-lg text-center hover:scale-105 transform transition-all hidden-item">
@@ -547,8 +563,11 @@
                 </form>
 
                 <!-- DATOS CONTACTO -->
-                <div class="text-white grid items-center justify-items-center space-x-4 mb-4 hidden-item">
-                    <div class="flex justify-center items-center">
+                <div class="text-white flex flex-col items-center justify-center space-y-4 mb-4 hidden-item">
+                    <p class="text-lg text-center max-w-md">
+                        ¿Tienes alguna pregunta o propuesta? ¡No dudes en escribirme! Respondo lo antes posible.
+                    </p>
+                    <div class="flex items-center space-x-3">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 fill-white">
                             <path
                                 d="M17.707 12.293a.999.999 0 0 0-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 0 0 0-1.414l-4-4a.999.999 0 0 0-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 0 0 0-1.414l-4-4.001zm-.127 6.712c-1.248-.021-5.518-.356-8.873-3.712-3.366-3.366-3.692-7.651-3.712-8.874L7 4.414 9.586 7 8.293 8.293a1 1 0 0 0-.272.912c.024.115.611 2.842 2.271 4.502s4.387 2.247 4.502 2.271a.991.991 0 0 0 .912-.271L17 14.414 19.586 17l-2.006 2.005z">
@@ -556,15 +575,16 @@
                         </svg>
                         <span class="text-lg">+34 656 44 85 41</span>
                     </div>
-                    <div class="flex justify-center items-center">
+                    <div class="flex items-center space-x-3">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 fill-white">
                             <path
                                 d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z">
                             </path>
                         </svg>
-                        <span class="text-lg"> elenaro2004@hotmail.com</span>
+                        <span class="text-lg">elenaro2004@hotmail.com</span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -710,6 +730,27 @@
 
     </script>
     <!-- FIN Script Animacion scroll -->
+
+    <!-- INICIO Script Botón volver arriba -->
+    <script>
+        // Mostrar/ocultar el botón según el desplazamiento
+        window.onscroll = function () {
+            let button = document.getElementById("scrollTopBtn");
+            if (document.documentElement.scrollTop > 300) {
+                button.classList.remove("opacity-0");
+                button.classList.add("opacity-100");
+            } else {
+                button.classList.remove("opacity-100");
+                button.classList.add("opacity-0");
+            }
+        };
+
+        // Función para volver arriba con efecto suave
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+    <!-- FIN Script Botón volver arriba -->
 
 </body>
 
