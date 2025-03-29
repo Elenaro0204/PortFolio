@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* @layer theme, base, components, utilities; */
 @theme {
     --color-blue: #10439F;
@@ -26,7 +28,7 @@
     }
 
     h2 {
-        @apply text-4xl font-bold text-yellow-400 mb-8;
+        @apply text-4xl font-bold dark:text-yellow-400 mb-8;
     }
 }
 
