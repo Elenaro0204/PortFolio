@@ -2,5 +2,8 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.0.14",
     "tailwindcss": "^4.0.14"
+  },
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/css/styles-sin-compilar.css -o ./dist/css/styles-compilado.css --minify"
   }
 }
