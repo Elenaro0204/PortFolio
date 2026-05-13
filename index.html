@@ -26,9 +26,9 @@
             <figure class="w-auto">
                 <a href="#">
                     <!-- Imagen para modo claro -->
-                    <img src="dist/assets/mis_logos/3.png" alt="Logo Portfolio" class="w-16 h-16 block dark:hidden">
+                    <img src="/mis_logos/3.png" alt="Logo Portfolio" class="w-16 h-16 block dark:hidden">
                     <!-- Imagen para modo oscuro -->
-                    <img src="dist/assets/mis_logos/4.png" alt="Logo Portfolio" class="w-16 h-16 hidden dark:block">
+                    <img src="/mis_logos/4.png" alt="Logo Portfolio" class="w-16 h-16 hidden dark:block">
                 </a>
             </figure>
 
@@ -76,50 +76,81 @@
             </div>
 
             <div id="mobileMenu"
-                class="fixed top-0 right-0 w-80 h-screen bg-white dark:bg-gray-900 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col p-6">
-                <button id="close-menu" class="p-2 rounded-full text-3xl self-end">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-800 dark:text-white" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
+                class="fixed top-0 right-0 w-60 h-screen bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-2xl z-50 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-between p-6 border-l border-black/10 dark:border-white/10">
 
-                <a href="/cv/CV_ElenaRengel.pdf" download target="_blank"
-                    class="px-4 py-2 rounded-full border border-yellow-400 text-yellow-500 hover:bg-yellow-400 hover:text-gray-900 transition">
-                    CV
-                </a>
+                <!-- PARTE SUPERIOR -->
+                <div>
 
-                <a href="#presentacion"
-                    class="text-lg font-medium text-gray-800 dark:text-white hover:text-yellow-300 transition duration-500 transform hover:rotate-360">
-                    Sobre Mí
-                </a>
+                    <!-- BOTÓN CERRAR -->
+                    <div class="flex justify-end mb-8">
+                        <button id="close-menu"
+                            class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-800 dark:text-white"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
-                <a href="#habilidades"
-                    class="text-lg font-medium text-gray-800 dark:text-white hover:text-yellow-300 transition duration-500 transform hover:rotate-360">
-                    Habilidades
-                </a>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
 
-                <a href="#proyectos"
-                    class="text-lg font-medium text-gray-800 dark:text-white hover:text-yellow-300 transition duration-500 transform hover:rotate-360">
-                    Proyectos
-                </a>
+                            </svg>
+                        </button>
+                    </div>
 
-                <a href="#contacto"
-                    class="text-lg font-medium text-gray-800 dark:text-white hover:text-yellow-300 transition duration-500 transform hover:rotate-360">
-                    Contacto
-                </a>
+                    <!-- CV -->
+                    <a href="/cv/CV_ElenaRengel.pdf" download target="_blank"
+                        class="flex justify-center items-center px-5 py-3 rounded-2xl border border-yellow-400 text-yellow-500 hover:bg-yellow-400 hover:text-gray-900 transition font-semibold mb-10">
 
-                <!-- Logo -->
-                <figure class="absolute bottom-0 left-0 w-full p-4">
-                    <a href="#">
-                        <!-- Imagen para modo claro -->
-                        <img src="dist/assets/mis_logos/3.png" alt="Logo Portfolio"
-                            class="w-16 h-16 mx-auto block dark:hidden">
-                        <!-- Imagen para modo oscuro -->
-                        <img src="dist/assets/mis_logos/4.png" alt="Logo Portfolio"
-                            class="w-16 h-16 mx-auto hidden dark:block">
+                        Descargar CV
+
                     </a>
+
+                    <!-- LINKS -->
+                    <nav class="flex flex-col gap-6">
+
+                        <a href="#presentacion"
+                            class="text-lg font-medium text-gray-800 dark:text-white hover:text-yellow-400 transition duration-300">
+
+                            Sobre mí
+
+                        </a>
+
+                        <a href="#habilidades"
+                            class="text-lg font-medium text-gray-800 dark:text-white hover:text-yellow-400 transition duration-300">
+
+                            Habilidades
+
+                        </a>
+
+                        <a href="#proyectos"
+                            class="text-lg font-medium text-gray-800 dark:text-white hover:text-yellow-400 transition duration-300">
+
+                            Proyectos
+
+                        </a>
+
+                        <a href="#contacto"
+                            class="text-lg font-medium text-gray-800 dark:text-white hover:text-yellow-400 transition duration-300">
+
+                            Contacto
+
+                        </a>
+
+                    </nav>
+
+                </div>
+
+                <!-- LOGO ABAJO -->
+                <figure class="flex justify-center pb-4">
+
+                    <a href="#">
+
+                        <!-- CLARO -->
+                        <img src="dist/assets/mis_logos/3.png" alt="Logo Portfolio" class="w-16 h-16 block dark:hidden">
+
+                        <!-- OSCURO -->
+                        <img src="dist/assets/mis_logos/4.png" alt="Logo Portfolio" class="w-16 h-16 hidden dark:block">
+
+                    </a>
+
                 </figure>
 
             </div>
@@ -135,7 +166,7 @@
     <!-- HERO -->
     <section
         class="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 dark:from-indigo-950 dark:via-purple-950 dark:to-pink-950 text-white relative">
-        <div class="relative z-10 wrapper flex flex-col justify-center items-center text-center px-6 mb-8">
+        <div class="relative z-10 wrapper flex flex-col justify-center items-center text-center px-6 mb-8 mt-8">
             <h1
                 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight drop-shadow-lg animate__animated animate__fadeInDown">
                 Desarrollo aplicaciones web <br class="hidden md:block"> modernas y funcionales
@@ -203,7 +234,7 @@
         <div
             class="wrapper flex justify-center items-center flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-12 bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-2xl border border-black/5 dark:border-white/10">
 
-            <img src="./dist/assets/img/IMG_20250930_115736.jpg"
+            <img src="/img/IMG_20250930_115736.jpg"
                 class="w-64 h-64 object-cover rounded-full mb-6 md:mb-0 shadow-lg animate__animated animate__fadeInLeft hidden-item"
                 alt="Foto Propia">
 
@@ -287,7 +318,7 @@
 
                 <!-- IMAGEN -->
                 <div class="relative overflow-hidden h-full">
-                    <img src="./dist/assets/proyectos/Captura_Marvelpedia.png" alt="Marvelpedia"
+                    <img src="/proyectos/Captura_Marvelpedia.png" alt="Marvelpedia"
                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
 
                     <!-- Overlay -->
@@ -368,7 +399,7 @@
                     class="h-full flex flex-col group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:border-cyan-400/50 hover:-translate-y-2 transition-all duration-300 hidden-item space-y-6">
 
                     <div class="overflow-hidden">
-                        <img src="./dist/assets/proyectos/Captura_Dumbo.png" alt="CEI Dumbo"
+                        <img src="/proyectos/Captura_Dumbo.png" alt="CEI Dumbo"
                             class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
                     </div>
 
@@ -425,7 +456,7 @@
                     class="h-full flex flex-col group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:border-cyan-400/50 hover:-translate-y-2 transition-all duration-300 hidden-item space-y-6">
 
                     <div class="overflow-hidden">
-                        <img src="./dist/assets/proyectos/Captura_Hackathon.png" alt="Hackathon"
+                        <img src="/proyectos/Captura_Hackathon.png" alt="Hackathon"
                             class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
                     </div>
 
@@ -488,7 +519,7 @@
                     class="h-full flex flex-col group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:border-cyan-400/50 hover:-translate-y-2 transition-all duration-300 hidden-item space-y-6">
 
                     <div class="overflow-hidden">
-                        <img src="./dist/assets/proyectos/Captura_PFinalDIW.png" alt="Proyecto DIW"
+                        <img src="/proyectos/Captura_PFinalDIW.png" alt="Proyecto DIW"
                             class="w-full h-fit object-cover group-hover:scale-105 transition duration-500">
                     </div>
 
@@ -772,7 +803,7 @@
                     <article
                         class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-purple-600 to-purple-500 transform hidden-item">
                         <div class="w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center mb-5">
-                            <img src="./dist/assets/icons/ajax-1.svg" alt="Ajax" class="w-8 mx-auto mb-4">
+                            <img src="/icons/ajax-1.svg" alt="Ajax" class="w-8 mx-auto mb-4">
                         </div>
                         <h4 class="text-xl font-semibold">
                             Ajax
@@ -799,7 +830,7 @@
                     <article id="laravel"
                         class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-gray-700 to-gray-600 transform hidden-item">
                         <div class="w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center mb-5">
-                            <img src="./dist/assets/icons/laravel-2.svg" alt="Laravel" class="w-8 mx-auto mb-4">
+                            <img src="/icons/laravel-2.svg" alt="Laravel" class="w-8 mx-auto mb-4">
                         </div>
                         <h4 class="text-xl font-semibold">
                             Laravel
@@ -874,12 +905,12 @@
                         Base de Datos
                     </h3>
                 </div>
-                <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- MySQL -->
                     <article id="mysql"
                         class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-blue-500 to-blue-400 transform hidden-item">
                         <div class="w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center mb-5">
-                            <img src="./dist/assets/icons/mysql-logo-pure.svg" alt="MySQL" class="w-8 mx-auto mb-4">
+                            <img src="/icons/mysql-logo-pure.svg" alt="MySQL" class="w-8 mx-auto mb-4">
                         </div>
                         <h4 class="text-xl font-semibold">MySQL</h4>
                         <p class="text-sm text-gray-400 mt-2">
@@ -919,7 +950,7 @@
                     <article id="eclipse"
                         class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-indigo-600 to-indigo-500 transform hidden-item">
                         <div class="w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center mb-5">
-                            <img src="./dist/assets/icons/eclipse-11.svg" alt="Eclipse" class="w-8 mx-auto mb-4">
+                            <img src="/icons/eclipse-11.svg" alt="Eclipse" class="w-8 mx-auto mb-4">
                         </div>
                         <h4 class="text-xl font-semibold">Eclipse</h4>
                         <p class="text-sm text-gray-400 mt-2">
@@ -931,7 +962,7 @@
                     <article id="netbeans"
                         class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-yellow-600 to-yellow-500 transform hidden-item">
                         <div class="w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center mb-5">
-                            <img src="./dist/assets/icons/netbeans-1.svg" alt="NetBeans" class="w-8 mx-auto mb-4">
+                            <img src="/icons/netbeans-1.svg" alt="NetBeans" class="w-8 mx-auto mb-4">
                         </div>
                         <h4 class="text-xl font-semibold">NetBeans</h4>
                         <p class="text-sm text-gray-400 mt-2">
@@ -998,7 +1029,7 @@
                         CMS & Ecommerce
                     </h3>
                 </div>
-                <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Wordpress -->
                     <article id="wordpress"
                         class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-blue-600 to-blue-500 transform hidden-item">
@@ -1019,7 +1050,7 @@
                     <article id="moodle"
                         class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-orange-600 to-orange-500 transform hidden-item">
                         <div class="w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center mb-5">
-                            <img src="./dist/assets/icons/moodle-1.svg" alt="Moodle" class="w-8 mx-auto mb-4">
+                            <img src="/icons/moodle-1.svg" alt="Moodle" class="w-8 mx-auto mb-4">
                         </div>
                         <h4 class="text-xl font-semibold">Moodle</h4>
                         <p class="text-sm text-gray-400 mt-2">
@@ -1031,7 +1062,7 @@
                     <article id="prestashop"
                         class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-green-600 to-green-500 transform hidden-item">
                         <div class="w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center mb-5">
-                            <img src="./dist/assets/icons/prestashop.svg" alt="Prestashop" class="w-8 mx-auto mb-4">
+                            <img src="/icons/prestashop.svg" alt="Prestashop" class="w-8 mx-auto mb-4">
                         </div>
                         <h4 class="text-xl font-semibold">Prestashop</h4>
                         <p class="text-sm text-gray-400 mt-2">
@@ -1055,7 +1086,7 @@
                     <article id="apache"
                         class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-gray-600 to-gray-500 transform hidden-item">
                         <div class="w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center mb-5">
-                            <img src="./dist/assets/icons/apache-13.svg" alt="Apache" class="w-8 mx-auto mb-4">
+                            <img src="/icons/apache-13.svg" alt="Apache" class="w-8 mx-auto mb-4">
                         </div>
                         <h4 class="text-xl font-semibold">Apache</h4>
                         <p class="text-sm text-gray-400 mt-2">
@@ -1067,7 +1098,7 @@
                     <article id="nginx"
                         class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-green-600 to-green-500 transform hidden-item">
                         <div class="w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center mb-5">
-                            <img src="./dist/assets/icons/nginx-1.svg" alt="Nginx" class="w-8 mx-auto mb-4">
+                            <img src="/icons/nginx-1.svg" alt="Nginx" class="w-8 mx-auto mb-4">
                         </div>
                         <h4 class="text-xl font-semibold">Nginx</h4>
                         <p class="text-sm text-gray-400 mt-2">
